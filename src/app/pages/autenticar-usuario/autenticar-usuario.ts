@@ -36,9 +36,14 @@ private http = inject(HttpClient);
     this.http.post('http://localhost:8082/api/v1/usuario/autenticar', this.formulario.value)
 
     .subscribe({
-      next: (data) => { //Capturando a resposta de sucesso
-        console.log(data);
-        alert('Sucesso! Você será redirecionado para a agenda!'); // Provisório!!!
+      next: (data: any) => { //Capturando a resposta de sucesso
+        
+        //Salvar os dados do usuário autenticado em uma sessão
+        sessionStorage.setItem("usuario", JSON.stringify(data));
+
+        //Redirecionar para a página do dashboard
+        location.href= '/pages/dashboard';
+
       },
       error: (e) => { //Capturando a resposta de erro
         this.mensagemErro.set(e.error);
