@@ -11,32 +11,40 @@
             <div class="card shadow">
                 <div class="card-body">
                    
-                    <h4>Consulta de categoria</h4>
-                    <p>Listagem de categorias cadastradas em sua agenda.</p>
+                    <h4>Consulta de tarefas</h4>
+                    <p>Listagem de tarefas cadastradas em sua agenda.</p>
                     <hr/>    
                     
-                    @if(categorias().length == 0) {
+                    @if(tarefas().length == 0) {
                         <div class="alert alert-warning">
-                            Não há categorias cadastradas em sua agenda.
+                            Não há tarefas cadastradas em sua agenda.
                         </div>
                     }
-                    @else if(categorias().length > 0) {
+                    @else if(tarefas().length > 0) {
                         <table class="table table-hover table-sm">
                             <thead>
                                 <tr>
-                                    <th>Nome da categoria</th>
+                                    <th>Nome da tarefa</th>
+                                    <th>Data</th>
+                                    <th>Hora</th>
+                                    <th>Prioridade</th>
+                                    <th>Categoria</th>
                                     <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @for(c of categorias(); track c.id) {
+                                @for(t of tarefas(); track t.id) {
                                     <tr>
-                                        <td>{{ c.nome | uppercase }}</td>
+                                        <td>{{ t.nome | uppercase }}</td>
+                                        <td>{{ t.data | date: 'dd/MM/yyyy' }}</td>
+                                        <td>{{ t.hora }}</td>
+                                        <td>{{ t.prioridade }}</td>
+                                        <td>{{ t.categoria.nome | uppercase }}</td>
                                         <td>
-                                            <button class="btn btn-outline-primary me-1" [routerLink]="['/pages/editar-categoria', c.id]">
+                                            <button class="btn btn-outline-primary me-1" >
                                                 Editar
                                             </button>
-                                            <button class="btn btn-outline-danger" (click)="onDelete(c)">
+                                            <button class="btn btn-outline-danger">
                                                 Excluir
                                             </button>
                                         </td>
@@ -45,8 +53,8 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td colspan="2">
-                                        Total de registros: {{ categorias().length }}
+                                    <td colspan="6">
+                                        Total de registros: {{ tarefas().length }}
                                     </td>
                                 </tr>
                             </tfoot>
