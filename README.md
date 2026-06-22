@@ -1,150 +1,125 @@
 # 📋 Web Agenda
 
-Aplicação Front-End desenvolvida com Angular para gerenciamento de tarefas e categorias.
+Sistema web para gerenciamento de tarefas e categorias com autenticação de usuários, desenvolvido em Angular.
 
-O sistema permite autenticação de usuários, controle de sessão, cadastro de categorias, gerenciamento de tarefas e acesso a um dashboard protegido por autenticação.
-
----
-
-## 🚀 Demonstração
-
-Projeto desenvolvido para estudos e prática de desenvolvimento Front-End moderno utilizando Angular e integração com APIs REST.
+A aplicação simula um ambiente real de produtividade, com controle de acesso, dashboard, organização por categorias e gerenciamento completo de tarefas.
 
 ---
 
-## ✨ Funcionalidades
+## 🌐 Demonstração
 
-### 👤 Usuários
+Projeto front-end SPA (Single Page Application) integrado a uma API REST.
 
-- Cadastro de usuários
-- Autenticação
+---
+
+## ⚙️ Funcionalidades
+
+### 👤 Autenticação
+- Cadastro de usuário
+- Login com autenticação
 - Controle de sessão
-- Logout
+- Proteção de rotas com AuthGuard
+- Logout seguro
+
+---
 
 ### 📁 Categorias
-
-- Cadastro de categorias
-- Consulta de categorias
-- Edição de categorias
-- Exclusão de categorias
-
-### ✅ Tarefas
-
-- Cadastro de tarefas
-- Consulta de tarefas
-- Edição de tarefas
-- Exclusão de tarefas
-- Filtro por período
-
-### 🔒 Segurança
-
-- Rotas protegidas com AuthGuard
-- Validação de autenticação
-- Controle de acesso às páginas internas
-
-### 📊 Dashboard
-
-- Visualização centralizada das funcionalidades
-- Navegação entre módulos
+- Criar categorias personalizadas
+- Listar categorias
+- Editar categorias
+- Excluir categorias
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+### ✅ Tarefas
+- Criar tarefas com categoria
+- Listar tarefas por data
+- Atualizar tarefas
+- Excluir tarefas
+- Organização por status/período
 
-### Front-End
+---
 
+### 📊 Dashboard
+- Acesso centralizado às funcionalidades
+- Navegação dinâmica entre módulos
+- Interface intuitiva e responsiva
+
+---
+
+## 🧠 Arquitetura e Conceitos Aplicados
+
+- Angular Standalone Components
+- Lazy loading via rotas
+- Route Guards (AuthGuard)
+- Reactive Forms
+- Angular Signals (estado reativo)
+- HttpClient (consumo de API REST)
+- Componentização por domínio
+- Separação por módulos funcionais
+
+---
+
+## 🛠️ Tecnologias
+
+### Frontend
 - Angular 21
 - TypeScript
 - HTML5
 - CSS3
 
-### Recursos Angular
-
-- Standalone Components
-- Angular Signals
-- Reactive Forms
-- HttpClient
-- Angular Router
-- Route Guards
+### Arquitetura
+- SPA (Single Page Application)
+- REST API consumption
+- Component-based architecture
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
-```text
-src
- ┣ app
- ┃ ┣ guards
- ┃ ┣ pages
- ┃ ┃ ┣ autenticar-usuario
- ┃ ┃ ┣ cadastrar-usuario
- ┃ ┃ ┣ dashboard
- ┃ ┃ ┣ cadastrar-categoria
- ┃ ┃ ┣ consultar-categoria
- ┃ ┃ ┣ editar-categoria
- ┃ ┃ ┣ cadastrar-tarefa
- ┃ ┃ ┣ consultar-tarefa
- ┃ ┃ ┗ editar-tarefa
- ┃ ┣ app.config.ts
- ┃ ┣ app.routes.ts
- ┃ ┗ app.ts
- ┗ ...
+```
+src/app
+ ┣ guards
+ ┣ pages
+ ┃ ┣ autenticar-usuario
+ ┃ ┣ cadastrar-usuario
+ ┃ ┣ dashboard
+ ┃ ┣ cadastrar-categoria
+ ┃ ┣ consultar-categoria
+ ┃ ┣ editar-categoria
+ ┃ ┣ cadastrar-tarefa
+ ┃ ┣ consultar-tarefa
+ ┃ ┗ editar-tarefa
+ ┣ app.routes.ts
+ ┣ app.config.ts
+ ┗ app.ts
 ```
 
 ---
 
-## 🔄 Fluxo da Aplicação
+## 🔐 Segurança
 
-```text
-Usuário
-    ↓
-Login
-    ↓
-AuthGuard
-    ↓
-Dashboard
-    ↓
-Categorias
-    ↓
-Tarefas
-```
+- Rotas protegidas por AuthGuard
+- Validação de sessão do usuário
+- Bloqueio de acesso sem autenticação
 
 ---
 
-## 📌 Conceitos Aplicados
+## 🎯 Objetivo do Projeto
 
-- Arquitetura SPA
-- Componentização
-- Gerenciamento de estado com Signals
-- Proteção de rotas
-- Comunicação com APIs REST
-- Formulários reativos
-- Navegação entre páginas
-- Controle de sessão
+Este projeto foi desenvolvido com foco em:
 
----
-
-## 🎯 Objetivos do Projeto
-
-Este projeto foi desenvolvido com foco na prática de:
-
-- Angular moderno
-- Desenvolvimento Front-End
+- Prática de Angular moderno
 - Consumo de APIs REST
-- Autenticação de usuários
-- Proteção de rotas
+- Autenticação e segurança no front-end
 - Estruturação de aplicações escaláveis
+- Boas práticas de organização de código
 
 ---
 
 ## 👩‍💻 Desenvolvedora
 
-### Beatriz Lima
+**Beatriz Lima**
 
-Desenvolvedora Java Full Stack
-
-GitHub:
-https://github.com/beatrizlima-tech
-
-LinkedIn:
-https://www.linkedin.com/in/beatriz-lima-tech
+- GitHub: https://github.com/beatrizlima-tech
+- LinkedIn: https://www.linkedin.com/in/beatriz-lima-tech
