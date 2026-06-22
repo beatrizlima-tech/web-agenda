@@ -1,59 +1,150 @@
-# WebAgenda
+# 📋 Web Agenda
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.0.
+Aplicação Front-End desenvolvida com Angular para gerenciamento de tarefas e categorias.
 
-## Development server
+O sistema permite autenticação de usuários, controle de sessão, cadastro de categorias, gerenciamento de tarefas e acesso a um dashboard protegido por autenticação.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## 🚀 Demonstração
+
+Projeto desenvolvido para estudos e prática de desenvolvimento Front-End moderno utilizando Angular e integração com APIs REST.
+
+---
+
+## ✨ Funcionalidades
+
+### 👤 Usuários
+
+- Cadastro de usuários
+- Autenticação
+- Controle de sessão
+- Logout
+
+### 📁 Categorias
+
+- Cadastro de categorias
+- Consulta de categorias
+- Edição de categorias
+- Exclusão de categorias
+
+### ✅ Tarefas
+
+- Cadastro de tarefas
+- Consulta de tarefas
+- Edição de tarefas
+- Exclusão de tarefas
+- Filtro por período
+
+### 🔒 Segurança
+
+- Rotas protegidas com AuthGuard
+- Validação de autenticação
+- Controle de acesso às páginas internas
+
+### 📊 Dashboard
+
+- Visualização centralizada das funcionalidades
+- Navegação entre módulos
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Front-End
+
+- Angular 21
+- TypeScript
+- HTML5
+- CSS3
+
+### Recursos Angular
+
+- Standalone Components
+- Angular Signals
+- Reactive Forms
+- HttpClient
+- Angular Router
+- Route Guards
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+src
+ ┣ app
+ ┃ ┣ guards
+ ┃ ┣ pages
+ ┃ ┃ ┣ autenticar-usuario
+ ┃ ┃ ┣ cadastrar-usuario
+ ┃ ┃ ┣ dashboard
+ ┃ ┃ ┣ cadastrar-categoria
+ ┃ ┃ ┣ consultar-categoria
+ ┃ ┃ ┣ editar-categoria
+ ┃ ┃ ┣ cadastrar-tarefa
+ ┃ ┃ ┣ consultar-tarefa
+ ┃ ┃ ┗ editar-tarefa
+ ┃ ┣ app.config.ts
+ ┃ ┣ app.routes.ts
+ ┃ ┗ app.ts
+ ┗ ...
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🔄 Fluxo da Aplicação
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+Usuário
+    ↓
+Login
+    ↓
+AuthGuard
+    ↓
+Dashboard
+    ↓
+Categorias
+    ↓
+Tarefas
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📌 Conceitos Aplicados
 
-## Building
+- Arquitetura SPA
+- Componentização
+- Gerenciamento de estado com Signals
+- Proteção de rotas
+- Comunicação com APIs REST
+- Formulários reativos
+- Navegação entre páginas
+- Controle de sessão
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🎯 Objetivos do Projeto
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Este projeto foi desenvolvido com foco na prática de:
 
-## Running unit tests
+- Angular moderno
+- Desenvolvimento Front-End
+- Consumo de APIs REST
+- Autenticação de usuários
+- Proteção de rotas
+- Estruturação de aplicações escaláveis
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 👩‍💻 Desenvolvedora
 
-## Running end-to-end tests
+### Beatriz Lima
 
-For end-to-end (e2e) testing, run:
+Desenvolvedora Java Full Stack
 
-```bash
-ng e2e
-```
+GitHub:
+https://github.com/beatrizlima-tech
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+LinkedIn:
+https://www.linkedin.com/in/beatriz-lima-tech
